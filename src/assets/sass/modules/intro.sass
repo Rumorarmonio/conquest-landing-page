@@ -1,0 +1,106 @@
+.intro
+  overflow: hidden
+
+  &__wrapper
+    display: flex
+    align-items: center
+    justify-content: space-evenly
+    width: 100%
+    max-width: $main-width
+    margin: auto
+    @media (max-width: $main-width)
+      flex-direction: column
+      gap: 20px
+
+  &__title
+    position: relative
+    color: $almost-black
+    font: 400 45px 'Playfair Display'
+    line-height: 60px
+
+    &::before
+      @include dash
+      top: 28%
+      left: -22%
+      @media (max-width: $main-width)
+        display: none
+
+  &__text
+    font-weight: 300
+    font-size: 14px
+    line-height: 21px
+    color: $light-grey
+
+  &__description
+    width: 100%
+    max-width: 400px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: start
+    gap: 25px
+    z-index: 1
+    @media (max-width: $main-width)
+      text-align: center
+      align-items: center
+
+  &__right
+    position: relative
+    transform-style: preserve-3d
+    max-height: 804px
+    @media (max-width: $bp900)
+      width: 70%
+
+    &::after
+      position: absolute
+      bottom: 4%
+      right: 43%
+      content: ''
+      width: 496px
+      height: 780px
+      border-radius: 0 50% 50% 0
+      background: linear-gradient(180deg, rgba(234, 227, 212, 0) 0%, #EAE3D4 100%)
+      mix-blend-mode: normal
+      transform: matrix(-1, 0, 0, 1, 0, 0) translateZ(-1px)
+      @media (max-width: $bp900)
+        display: none
+
+.title-subtitle
+  font: 400 30px 'Playfair Display'
+  line-height: 40px
+
+.info
+  position: absolute
+  font-family: 'Prata'
+  font-style: normal
+  font-weight: 400
+  font-size: 16px
+  line-height: 22px
+
+  &_top
+    top: 17%
+    left: -18%
+    @media (max-width: $bp400)
+      display: none
+
+    &::after
+      @include dash
+      top: 38%
+      left: 130%
+
+
+  &_bottom
+    top: 79%
+    right: -11%
+    @media (max-width: $bp400)
+      display: none
+
+    &::before
+      @include dash
+      bottom: 44%
+      right: 114%
+      @media (max-width: $bp400)
+        display: none
+
+.button_black
+  @include button
