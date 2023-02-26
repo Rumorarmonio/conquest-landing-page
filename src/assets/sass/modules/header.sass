@@ -1,0 +1,62 @@
+.header
+  width: 100%
+  max-width: $main-width
+  display: flex
+  justify-content: space-between
+  align-items: center
+  flex-wrap: wrap
+  margin: auto
+  padding: 30px 0
+  @media (max-width: $bp700)
+    flex-direction: column
+    gap: 20px
+
+  &__menu
+    display: flex
+    flex-direction: row
+    align-items: center
+    flex-wrap: wrap
+    gap: 65px
+    font-size: 14px
+    color: $grey
+    @media (max-width: $bp500)
+      flex-direction: column
+      gap: 20px
+
+  &__icons
+    display: flex
+    gap: 21px
+    align-items: center
+
+  &__icon
+    &_circle
+      position: relative
+
+      &::after
+        top: 0
+        left: 70%
+        position: absolute
+        display: flex
+        justify-content: center
+        align-items: center
+        content: '1'
+        width: 13px
+        height: 13px
+        font-size: 8px
+        border-radius: 50%
+        background-color: #E6C8B4
+        text-align: center
+
+.logo
+  &__image
+    margin-right: -2px
+
+  &__text
+    display: inline
+    vertical-align: middle
+    text-transform: uppercase
+    font: 400 12px 'Playfair Display'
+    font-style: normal
+    line-height: 16px
+    letter-spacing: 0.14em
+    color: $grey
