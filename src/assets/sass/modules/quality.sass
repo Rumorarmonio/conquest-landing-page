@@ -1,0 +1,76 @@
+.quality
+  overflow: hidden
+  padding: 52px 0
+
+  &__wrapper
+    display: flex
+    justify-content: space-evenly
+    margin: auto
+    flex-wrap: wrap
+    width: 100%
+    max-width: $main-width
+
+  &__left
+    position: relative
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    gap: 20px
+
+    &::before
+      z-index: -1
+      position: absolute
+      right: 45%
+      top: -20%
+      content: ''
+      background-color: #F7F5EF
+      width: 200%
+      height: 200%
+
+  &__arrows
+    display: flex
+    flex-direction: row
+    align-items: center
+    gap: 15px
+    margin-right: 117px
+    @media (max-width: $bp900)
+      margin: auto
+
+
+  &__right
+    position: relative
+    align-self: center
+    display: flex
+    flex-direction: column
+    align-items: self-start
+    gap: 20px
+    width: 100%
+    max-width: 330px
+
+    &::after
+      bottom: 68%
+      left: 97%
+      @include circle
+
+    &::before
+      top: -53%
+      left: 95%
+      @include circle(745px)
+
+  &__title
+    font: 400 32px 'Playfair Display'
+    color: $almost-black
+
+  &__description
+    color: $dark-grey
+    line-height: 150%
+
+  &__button
+    @include button(#D4B098)
+
+.arrow
+  &_right
+    transform: rotate(180deg)
+
+.page-number
+  font: 400 12px 'Prata'

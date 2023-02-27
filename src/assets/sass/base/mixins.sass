@@ -12,3 +12,12 @@
   content: ''
   width: 50px
   border-bottom: 1px solid #8B8371
+
+@mixin circle($diameter: 365px)
+  z-index: -1
+  position: absolute
+  content: ''
+  width: $diameter
+  height: $diameter
+  border: 1px solid #D4B098
+  border-radius: 50%
