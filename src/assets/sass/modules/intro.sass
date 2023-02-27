@@ -1,5 +1,6 @@
 .intro
   overflow: hidden
+  margin-bottom: 54px
 
   &__wrapper
     display: flex
@@ -39,14 +40,12 @@
     justify-content: space-between
     align-items: start
     gap: 25px
-    z-index: 1
     @media (max-width: $main-width)
       text-align: center
       align-items: center
 
   &__right
     position: relative
-    transform-style: preserve-3d
     max-height: 804px
     @media (max-width: $bp900)
       width: 70%
@@ -60,8 +59,8 @@
       height: 780px
       border-radius: 0 50% 50% 0
       background: linear-gradient(180deg, rgba(234, 227, 212, 0) 0%, #EAE3D4 100%)
-      mix-blend-mode: normal
-      transform: matrix(-1, 0, 0, 1, 0, 0) translateZ(-1px)
+      z-index: -1
+      transform: matrix(-1, 0, 0, 1, 0, 0)
       @media (max-width: $bp900)
         display: none
 
@@ -87,7 +86,6 @@
       @include dash
       top: 38%
       left: 130%
-
 
   &_bottom
     top: 79%
