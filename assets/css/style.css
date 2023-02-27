@@ -842,6 +842,7 @@ body {
 
 .models {
   background-color: #fff;
+  padding-bottom: 107px;
 }
 .models__wrapper {
   width: 100%;
@@ -853,9 +854,6 @@ body {
   justify-content: space-between;
   align-items: flex-end;
   margin-bottom: 30px;
-}
-.models__title {
-  font: 400 32px "Playfair Display";
 }
 .models__see-all {
   font-weight: 500;
@@ -918,4 +916,103 @@ body {
   border-bottom: 1px solid #8B8371;
   top: 57%;
   right: 104%;
+}
+
+.quality {
+  overflow: hidden;
+  padding: 52px 0;
+}
+.quality__wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1165px;
+}
+.quality__left {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+}
+.quality__left::before {
+  z-index: -1;
+  position: absolute;
+  right: 45%;
+  top: -20%;
+  content: "";
+  background-color: #F7F5EF;
+  width: 200%;
+  height: 200%;
+}
+.quality__arrows {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  margin-right: 117px;
+}
+@media (max-width: 900px) {
+  .quality__arrows {
+    margin: auto;
+  }
+}
+.quality__right {
+  position: relative;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+  gap: 20px;
+  width: 100%;
+  max-width: 330px;
+}
+.quality__right::after {
+  bottom: 68%;
+  left: 97%;
+  z-index: -1;
+  position: absolute;
+  content: "";
+  width: 365px;
+  height: 365px;
+  border: 1px solid #D4B098;
+  border-radius: 50%;
+}
+.quality__right::before {
+  top: -53%;
+  left: 95%;
+  z-index: -1;
+  position: absolute;
+  content: "";
+  width: 745px;
+  height: 745px;
+  border: 1px solid #D4B098;
+  border-radius: 50%;
+}
+.quality__title {
+  font: 400 32px "Playfair Display";
+  color: #1B1A17;
+}
+.quality__description {
+  color: #444240;
+  line-height: 150%;
+}
+.quality__button {
+  font-family: "Roboto";
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 24px 54px;
+  color: #fff;
+  background-color: #D4B098;
+}
+
+.arrow_right {
+  transform: rotate(180deg);
+}
+
+.page-number {
+  font: 400 12px "Prata";
 }
