@@ -1,0 +1,55 @@
+.socials
+  padding: 81px 0
+  background-color: #fff
+
+  &__wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 100%
+    max-width: $main-width
+    margin: auto
+    @media(max-width: $bp1000)
+      flex-direction: column
+      gap: 35px
+
+  &__left
+    width: 100%
+    max-width: 475px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    gap: 60px
+    @media(max-width: $bp1000)
+      align-items: center
+      text-align: center
+
+  &__title
+    font: 400 32px 'Playfair Display'
+
+  &__text
+    line-height: 27px
+
+    & > strong
+      font-weight: 700
+
+  &__menu
+    display: flex
+    gap: 15px
+
+  &__right
+    max-width: 100%
+    display: grid
+    grid-template: 242px 242px / 228px 377px
+    grid-gap: 10px
+    @media(max-width: $bp700)
+      display: flex
+      flex-direction: column
+      align-items: center
+      &:last-child
+        width: 100%
+        max-width: 242px
+
+  &__image
+    &_big
+      grid-area: 1 / 2 / 3 / 3

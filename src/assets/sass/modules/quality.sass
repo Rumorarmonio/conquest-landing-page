@@ -1,6 +1,6 @@
 .quality
   overflow: hidden
-  padding: 52px 0
+  padding: 52px 0 13px
 
   &__wrapper
     display: flex
@@ -46,6 +46,9 @@
     gap: 20px
     width: 100%
     max-width: 330px
+    @media (max-width: $bp900)
+      text-align: center
+      align-items: center
 
     &::after
       bottom: 68%
